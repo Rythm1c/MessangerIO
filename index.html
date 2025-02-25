@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MessengerIO</title>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body class="flex flex-col items-center justify-center h-screen bg-gray-100 w-full max-w-md mx-auto">
+    <section class="w-[60vw] bg-white p-2 rounded-lg shadow-md flex flex-col h-[80vh]">
+        <div class="flex items-center justify-between  p-2 border-b">
+            <div class="flex items-center space-x-2">
+                <button class="p-2 bg-gray-200 rounded-[2px] hover:bg-gray-300">&#x2190;</button>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="Profile"
+                    class="w-10 h-10 rounded-full">
+                <span class="font-semibold">Profile Name</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <button class="p-2 bg-gray-200 rounded-[2px] hover:bg-gray-300">📞</button>
+                <button class="p-2 bg-gray-200 rounded-[2px] hover:bg-gray-300">📹</button>
+                <button class="p-2 rounded-[2px] hover:bg-gray-300">☰</button>
+            </div>
+        </div>
+
+        <div class="flex-1 overflow-y-auto p-2 space-y-2  h-[60vh]">
+            <div class="flex flex-col items-start">
+                <div class="bg-gray-200 p-2 rounded-lg max-w-xs">Hello!</div>
+            </div>
+            <div class="flex flex-col items-end">
+                <div class="bg-blue-500 text-white p-2 rounded-lg max-w-xs">Hi there!</div>
+            </div>
+        </div>
+
+        <form action="" class="flex items-center p-2 border-t">
+
+            <button id="emoji-button" class="p-2 bg-gray-200 rounded-lg hover:bg-gray-300">😊</button>
+            <input type="text"
+                class="mx-2 flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Type a message...">
+            <button class="p-2 bg-gray-300 text-black rounded-lg hover:bg-gray-400 mr-2">🎤</button>
+            <button class="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+                &#x27A4;
+            </button>
+        </form>
+
+        <div id="emoji-menu" class="hidden absolute bottom-16 bg-white border rounded-lg shadow-md p-2 w-40">
+            <div class="grid grid-cols-5 gap-2">
+                <button class="text-xl">😀</button>
+                <button class="text-xl">😁</button>
+                <button class="text-xl">😂</button>
+                <button class="text-xl">🤣</button>
+                <button class="text-xl">😃</button>
+                <button class="text-xl">😄</button>
+                <button class="text-xl">😅</button>
+                <button class="text-xl">😆</button>
+                <button class="text-xl">😉</button>
+                <button class="text-xl">😊</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
