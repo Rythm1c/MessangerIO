@@ -14,7 +14,7 @@ emojiButton.addEventListener("click", (event) => {
 document.querySelectorAll("#emoji-menu button").forEach(button => {
     button.addEventListener("click", () => {
         textInput.value += button.textContent;
-        emojiMenu.classList.add("hidden");
+        //emojiMenu.classList.add("hidden");
     });
 });
 
@@ -36,9 +36,63 @@ chatContainer.addEventListener("click", (event) => {
     }
 });
 
+document.getElementById("hamburger-button").addEventListener("click", function (event) {
+    event.stopPropagation();
+    let menu = document.getElementById("dropdown-menu");
+    menu.classList.toggle("hidden");
+});
 
-class contact {
-    constructor(name, constact, profile,) {
+document.addEventListener("click", function (event) {
+    let menu = document.getElementById("dropdown-menu");
+    let button = document.getElementById("hamburger-button");
+    if (!button.contains(event.target) && !menu.contains(event.target)) {
+        menu.classList.add("hidden");
+    }
+});
+
+class Contact {
+    constructor(name, contact, pfp, email) {
+        this.name = name;
+        this.contact = contact;
+        this.pfp = pfp;
+        this.email = email;
+    }
+}
+
+class Message {
+    constructor(time, text) {
+        this.time = time;
+        this.text = text;
+    }
+
+    find(value) {
+        return this.text.contains(value);
+    }
+
+
+}
+
+class Chat {
+    #messages;
+    constructor(sender, recipient) {
+        this.sender = sender;
+        this.recipient = recipient;
+    }
+
+    add_message(message) {
+        this.#messages.push(message);
+    }
+
+    find(value) {
+        //not impilemented yet
+    }
+
+    delete_message(index) {
 
     }
 }
+
+/* const contacts = [];
+const Chat = []; */
+
+

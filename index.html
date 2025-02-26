@@ -9,10 +9,11 @@
 </head>
 
 <body class="flex flex-col items-center justify-center h-screen bg-gray-100 w-full max-w-md mx-auto">
-    <div id="chat-app-container" class="w-[60vw] bg-white p-2 rounded-lg shadow-md flex flex-col h-[80vh] relative transition duration-300">
+    <div id="chat-app-container"
+        class="w-[60vw] bg-white p-2 rounded-[2px] shadow-md flex flex-col h-[80vh] relative transition duration-300">
         <div class="flex items-center justify-between  p-2 border-b">
             <div class="flex items-center space-x-2">
-                <button id="back-button"  class="p-2 bg-gray-200 rounded-[2px] hover:bg-gray-300">▤</button>
+                <button id="back-button" class="p-2 bg-gray-200 rounded-[2px] hover:bg-gray-300">▤</button>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="Profile"
                     class="w-10 h-10 rounded-full">
                 <span class="font-semibold">Profile Name</span>
@@ -20,32 +21,41 @@
             <div class="flex items-center items-center space-x-2">
                 <button class="p-2 bg-gray-200 rounded-[2px] hover:bg-gray-300">📞</button>
                 <button class="p-2 bg-gray-200 rounded-[2px] hover:bg-gray-300">📹</button>
-                <button class="p-2 rounded-[2px] hover:bg-gray-300">☰</button>
+                <div class="relative">
+                    <button id="hamburger-button" class="p-2 rounded-[2px] hover:bg-gray-300">☰</button>
+                    <div id="dropdown-menu"
+                        class="hidden absolute right-0 mt-2 w-32 bg-white border rounded-lg shadow-md">
+                        <button class="block w-full text-left px-4 py-2 hover:bg-gray-200">Info</button>
+                        <button class="block w-full text-left px-4 py-2 hover:bg-gray-200">Preferences</button>
+                        <button class="block w-full text-left px-4 py-2 hover:bg-gray-200">Search</button>
+                        <button class="block w-full text-left px-4 py-2 hover:bg-gray-200">More...</button>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="flex-1 overflow-y-auto p-2 space-y-2  h-[60vh]">
             <div class="flex flex-col items-start">
-                <div class="bg-gray-200 p-2 rounded-lg max-w-xs">Hello!</div>
+                <div class="bg-gray-200 p-2 rounded-[2px] max-w-xs">Hello!</div>
             </div>
             <div class="flex flex-col items-end">
-                <div class="bg-blue-500 text-white p-2 rounded-lg max-w-xs">Hi there!</div>
+                <div class="bg-blue-500 text-white p-2 rounded-[2px] max-w-xs">Hi there!</div>
             </div>
         </div>
 
         <form action="" class="flex items-center p-2 border-t">
 
-            <button id="emoji-button" class="p-2 bg-gray-200 rounded-lg hover:bg-gray-300">😊</button>
+            <button id="emoji-button" class="p-2 bg-gray-200 rounded-[2px] hover:bg-gray-300">😊</button>
             <input type="text"
-                class="mx-2 flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                class="mx-2 flex-1 p-2 border rounded-[2px] focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Type a message...">
-            <button class="p-2 bg-gray-300 text-black rounded-lg hover:bg-gray-400 mr-2">🎤</button>
-            <button class="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+            <button class="p-2 bg-gray-300 text-black rounded-[2px] hover:bg-gray-400 mr-2">🎤</button>
+            <button class="p-2 bg-blue-500 text-white rounded-[2px] hover:bg-blue-600">
                 &#x27A4;
             </button>
         </form>
 
-        <div id="emoji-menu" class="hidden absolute bottom-16 bg-white border rounded-lg shadow-md p-2 w-40">
+        <div id="emoji-menu" class="hidden absolute bottom-16 bg-white border rounded-[2px] shadow-md p-2 w-40">
             <div class="grid grid-cols-5 gap-2">
                 <button class="text-xl">😀</button>
                 <button class="text-xl">😁</button>
@@ -61,17 +71,18 @@
         </div>
 
         <div id="contact-modal" class="hidden absolute left-0 top-0 w-1/2 h-full bg-white shadow-lg p-4 border-r z-10">
-            <input type="text" class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Search contacts...">
+            <input type="text" class="w-full p-2 border rounded-[2px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Search contacts...">
             <div class="mt-4 space-y-2">
-                <div class="p-2 bg-gray-100 rounded-lg">John Doe</div>
-                <div class="p-2 bg-gray-100 rounded-lg">Jane Smith</div>
-                <div class="p-2 bg-gray-100 rounded-lg">Alex Brown</div>
+                <div class="p-2 bg-gray-100 rounded-[2px] hover:cursor-pointer hover:bg-gray-200">John Doe</div>
+                <div class="p-2 bg-gray-100 rounded-[2px] hover:cursor-pointer hover:bg-gray-200">Jane Smith</div>
+                <div class="p-2 bg-gray-100 rounded-[2px] hover:cursor-pointer hover:bg-gray-200">Alex Brown</div>
             </div>
         </div>
     </div>
 
     <script src="script.js"></script>
-    
+
 </body>
 
 </html>
