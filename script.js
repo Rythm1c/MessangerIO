@@ -104,7 +104,7 @@ let contacts = [
     new Contact("John Doe", "078982651", "none", "random@gmail.com"),
     new Contact("Jane Smith", "078586661", "assets/jane.png", "random@gmail.com"),
     new Contact("Alex Brown", "073445221", "assets/alex.jpeg", "random@gmail.com"),
-   
+
 ];
 let current_contact = 0;
 
@@ -146,6 +146,8 @@ function display_contact(index) {
 
 display_contact(current_contact);
 
+let time = new Date();
+
 document.getElementById("send-button").addEventListener("click", (event) => {
     event.preventDefault();
     let inputField = document.getElementById("chat-input");
@@ -153,7 +155,7 @@ document.getElementById("send-button").addEventListener("click", (event) => {
     if (message !== "") {
         let messageBubble = document.createElement("div");
         messageBubble.classList.add("flex", "flex-col", "items-end");
-        //messageBubble.innerHTML = `<p>${}</p>`;
+        messageBubble.innerHTML = `<p>${time.toTimeString()}</p>`;
         messageBubble.innerHTML = `<div class='bg-blue-500 text-white p-2 rounded-[2px] max-w-xs'>${message}</div>`;
         inputField.value = "";
         contacts[current_contact].add_message(messageBubble);
