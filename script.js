@@ -146,13 +146,13 @@ function display_contact(index) {
 
 display_contact(current_contact);
 
-let time = new Date();
 
 document.getElementById("send-button").addEventListener("click", (event) => {
     event.preventDefault();
     let inputField = document.getElementById("chat-input");
     let message = inputField.value.trim();
     if (message !== "") {
+        let time = new Date();
         let messageBubble = document.createElement("div");
         messageBubble.classList.add("flex", "flex-col", "items-end");
         messageBubble.innerHTML = `<p>${time.toTimeString()}</p>`;
