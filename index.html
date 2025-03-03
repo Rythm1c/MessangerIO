@@ -70,7 +70,8 @@
             </div>
         </div>
 
-        <div id="contact-modal" class="hidden absolute left-0 top-0 w-1/2 h-full bg-white shadow-lg p-4 border-r z-10">
+        <div id="contact-modal"
+            class="hidden absolute left-0 top-0 w-1/2 h-full bg-white shadow-lg p-4 border-r bg-gray-200 z-10">
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-lg font-semibold">Contacts</h2>
                 <button id="close-modal" class="p-2 bg-gray-200 rounded-[2px] hover:bg-gray-300">✖</button>
@@ -78,7 +79,7 @@
             <input type="text"
                 class="w-full p-2 border rounded-[2px] focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Search contacts...">
-            <div class="mt-4 space-y-2">
+            <div id="contacts-container" class="mt-4 space-y-2">
                 <div id="contact"
                     class="flex flex-row space-x-2 p-2 bg-gray-100 rounded-[2px] hover:cursor-pointer hover:bg-gray-200">
                     <img id="pfp" src="assets/user.png" alt="Profile" class="w-10 h-10 rounded-full">
