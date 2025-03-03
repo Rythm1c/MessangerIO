@@ -156,7 +156,7 @@ document.getElementById("send-button").addEventListener("click", (event) => {
         let messageBubble = document.createElement("div");
         messageBubble.classList.add("flex", "flex-col", "items-end");
         messageBubble.innerHTML = `<p>${time.toTimeString()}</p>`;
-        messageBubble.innerHTML = `<div class='bg-blue-500 text-white p-2 rounded-[2px] max-w-xs'>${message}</div>`;
+        messageBubble.innerHTML += `<div class='bg-blue-500 text-white p-2 rounded-[2px] max-w-xs'>${message}</div>`;
         inputField.value = "";
         contacts[current_contact].add_message(messageBubble);
         display_texts()
