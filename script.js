@@ -118,7 +118,7 @@ function add_contact(new_contact) {
 }
 
 
-//add_contact(new Contact("chatbot", "openAI.com", "assets/user.png", "openAI.org"));
+add_contact(new Contact("chatbot", "openAI.com", "assets/user.png", "openAI.org"));
 
 
 function display_texts() {
